@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="The webpage for the CVPR 2023 submission Latent2Latent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent2Latent: Learning to map textual latent directions to GAN latent directions</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Latent2Latent: Learning to map textual latent directions to GAN latent directions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous</a></span>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://raw.githubusercontent.com/Latent2Latent-CVPR2023/Latent2Latent-CVPR2023.github.io/main/mainvideo.mp4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Latent2Latent-CVPR2023/reproducibility"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+ <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+<center>
+      <video id="teaser" autoplay muted loop playsinline height="50%">
+        <source src="media/mainvideosmall.mp4"
+                type="video/mp4">
+      </video>
+</center>
+
+      <h2 class="subtitle has-text-centered">
+        Latent2Latent (L2L) enables adapting a frozen pretrained StyleGAN generator to 100 keyword defined domains simultaneously.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+	
+	
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-steve">
+          <img src="media/realistictsmall.jpg" class="img-fluid">
+		<h2 class="subtitle has-text-centered"> Photo → Realistic painting </h2>
+		<br>
+        </div>
+        <div class="item item-chair-tp">
+          <img src="media/vanghogtsmall.jpg" class="img-fluid">
+		<h2 class="subtitle has-text-centered">Photo → Painting in the style of Van Gogh</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/surrealtsmall.jpg" class="img-fluid">
+				<h2 class="subtitle has-text-centered">Photo → Surreal painting <br> </h2>
+        </div>
+        <div class="item item-steve">
+          <img src="media/cthulutsmall.jpg" class="img-fluid">
+			<h2 class="subtitle has-text-centered">Photo → Cthulu art</h2>
+        </div>
+        <div class="item item-chair-tp">
+          <img src="media/jokertsmall.jpg" class="img-fluid">
+				<h2 class="subtitle has-text-centered">Photo → The joker</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/bushytsmall.jpg" class="img-fluid">
+				<h2 class="subtitle has-text-centered">Photo → Bushy eyebrows</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/monalisatsmall.jpg" class="img-fluid">
+				<h2 class="subtitle has-text-centered">Photo → Mona Lisa Painting</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/oompatsmall.jpg" class="img-fluid">
+				<h2 class="subtitle has-text-centered">Photo → Oompa-loompa</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/zombietsmall.jpg" class="img-fluid">
+		<h2 class="subtitle has-text-centered">Photo → Zombie</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/samuraitsmall.jpg" class="img-fluid">
+		<h2 class="subtitle has-text-centered">Photo → Samurai Jack</h2>
+        </div>
+        <div class="item item-shiba">
+          <img src="media/graffititsmall.jpg" class="img-fluid">
+		<h2 class="subtitle has-text-centered">Photo → Graffiti painting</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+In this paper, we tackle the problem of domain adaptation of image generators. Given a pretrained image generator, the aim is to adapt it, without training on new images, to generate images belonging to new keyword-defined domains. We leverage the power of CLIP models for image-text similarity and the disentangled representation found in the latent spaces of generative adversarial networks (GANs). Rather than finetuning pretrained generators, we frame the problem as mapping one latent space to another. We propose training a latent-to-latent mapper (L2L) to map a large number of CLIP text directions to the latent spaces of GANs. This allows the mapper to model the both the interrelationships between text embeddings and the relationship between the latent spaces. Consequently, our method obtain higher quality results in a fraction of the training time and parameters of the state-of-the-art methods. Furthermore, our method enables test-time composition of keywords and even extends to some unseen words. We further demonstrate the generalizability of our method by showing results on different kinds of style-based GANs.
+Closest Subject Area That Your Submission Falls Into: Image and video synthesis and generation
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. --> 
+  
+  
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Editing real images</h2>
+        <div class="content has-text-justified">
+          <p>
+            We use Restyle to encode real images into W<sup>+</sup> and then use our learned directions
+          </p>
+          
+<center>
+ <video width="512" height="1024" autoplay muted loop playsinline>
+  <source src="media/allfullsmall.mp4" type="video/mp4">
+</video> 
+</center>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+    
+
+</section>
+
+
+
+</section>
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
